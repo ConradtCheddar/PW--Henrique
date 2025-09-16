@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        #center{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #header {
+            background-color: #8BC34A;
+            height: 20vh;
+            width: 100vw;
+            text-align: center;
+        }
+
+        #footer {
+             background-color: #8BC34A;
+            height: 20vh;
+            width: 100vw;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #article {
+            height: 60vh;
+            width: 60vw;
+        }
+
+        #aside {
+            flex: 1; 
+            background-color: #FFF8E1; 
+            padding: 20px;
+        }
+
+        #nav {
+            flex: 1;
+            background-color: #C8E6C9; 
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tudo">
+        <div id="header">header</div>
+
+        <div id="center">
+            <div id="article">article</div>
+            <div id="aside">aside</div>
+            <div id="nav">nav</div>
+        </div>
+
+        <div id="footer">footer</div>
+
+    </div>
+
+
+</body>
+</html>

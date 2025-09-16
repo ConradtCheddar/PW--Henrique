@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout de Imagens com Hover</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      gap: 10px;
+      width: 90%;
+      max-width: 1000px;
+      height: 500px;
+    }
+
+    .card {
+      flex-grow: 1;
+      background-color: #01ddfa;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 10px;
+      transition: flex-grow 0.4s ease;
+    }
+
+    .card:hover {
+      flex-grow: 3;
+    }
+
+    .card img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <img src="/imgs/huacheng-square.webp" alt="Imagem 1">
+  </div>
+  <div class="card">
+    <img src="/imgs/marcoplaza-monterrey.webp" alt="Imagem 2">
+  </div>
+  <div class="card">
+    <img src="/imgs/puerta-india.webp" alt="Imagem 3">
+  </div>
+  <div class="card">
+    <img src="/imgs/quezon-memorial.webp" alt="Imagem 4">
+  </div>
+</div>
+
+</body>
+</html>
