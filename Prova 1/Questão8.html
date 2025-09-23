@@ -5,7 +5,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="div">
+    <div class="conteiner">
         <div class="header">header</div>
         <div class="banner">banner</div>
         <div class="leftAside">leftAside</div>
@@ -16,44 +16,78 @@
     </div>
     
     <style>
-        .div{
-            display: grid;
-            grid-template-columns: 5 ;
-            grid-template-rows: 3 ;
-            width: 916;
-            height: 873;
+        .conteiner{
+            grid-template-columns: 150px 916px 150px ;
+            grid-template-rows: 40px 80px 400px 100px 90px;
+            grid-template-areas: 
+            "header header header"
+            "leftAside banner rightAside"
+            "leftAside mainContent rightAside"
+            "leftAside mainContent rightAside"
+            "leftAside lowContent rightAside"
+            "footer footer footer";
+
+            gap: 5px;
         }
         .header{
-            border: solid 10px bisque;
-            background-color: yellow;
+            grid-area: header; 
+            background-color: yellow; 
+            text-align: center; 
+            padding: 10px;
         }
         .banner{
-            border: solid 10px bisque;
-            background-color: red;
-        }
-        .leftAside{
-            border: solid 10px bisque;
-            background-color: green;
-        }
-        .rightAside{
-            border: solid 10px bisque;
-            background-color: yellow;
+            grid-area: banner; 
+            background-color: red; 
+            text-align: center; 
+            padding: 10px;
         }
         .mainContent{
-            border: solid 10px bisque;
-            background-color: blue;
+            grid-area: mainContent; 
+            background-color: blue; 
+            color: white; 
+            text-align: center; 
+            padding: 10px;
         }
         .lowContent{
-            border: solid 10px bisque;
-            background-color: green;
-        } 
+            grid-area: lowContent; 
+            background-color: green; 
+            color: white; 
+            text-align: center; 
+            padding: 10px;
+        }
+        .rightAside{
+            grid-area: rightAside; 
+            background-color: orange; 
+            text-align: center; 
+            padding: 10px;
+        }
+        .leftAside{
+            grid-area: leftAside; 
+            background-color: green; 
+            color: white; 
+            text-align: center; 
+            padding: 10px;
+        }
         .footer{
-            border: solid 10px bisque;
-            background-color: blue;
-        }  
-        @media screen {
-            
-
+            grid-area: footer; 
+            background-color: navy; 
+            color: white; 
+            text-align: center; 
+            padding: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .conteiner{
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto 437px auto auto auto;
+                grid-template-areas: 
+                "header"
+                "banner"
+                "leftAside"
+                "mainContent"
+                "rightAside"
+                "lowContent"
+                "Footer";
+            }
         }     
     </style>
 
