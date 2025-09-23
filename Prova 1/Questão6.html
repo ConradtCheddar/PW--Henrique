@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="japao" id="branca">
+            <div class="circulo" id="vermelha"></div>
+        </div>
+        <div class="holanda">
+            <div class="listra" id="azul"></div>
+            <div class="listra" id="branca"></div>
+            <div class="listra" id="vermelha"></div>
+        </div>
+        <div class="italia">
+            <div class="coluna" id="verde"></div>
+            <div class="coluna" id="branca"></div>
+            <div class="coluna" id="vermelha"></div>
+        </div> 
+    </div>
+    
+    <style>
+        .conteiner{
+            display: flex;
+            gap: 10px;
+        }
+        .listra{
+            height: 50px;
+            width: 200px;
+        }
+        #azul{
+            background-color: blue;
+        }
+        #branca{
+            background-color: white;
+        }
+        #vermelha{
+            background-color: red;
+        }
+        #verde{
+            background-color: green;
+        }
+        .coluna{
+            width: 66.6px;
+            height: 150px;
+        }
+        .italia{
+            display: flex;
+            flex-direction: row;
+        }
+        .japao{
+            display: flex;
+            height: 150px;
+            width: 200px;
+            border: solid 1px black;
+            justify-content:center ;
+            align-items: center;
+        }
+        .circulo{
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+        }
+
+    </style>
+    
+</body>
+</html>
