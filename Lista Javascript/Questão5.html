@@ -1,0 +1,66 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gerador de numeros random</title>
+</head>
+<body>
+    <h1>Sorteio de numeros</h1>
+    <label for="max">max:</label>
+    <input type="number" id="max">
+    <br><br>
+    <label for="min">min:</label>
+    <input type="number" id="min">
+    <br><br>
+    <button onclick="sortear()">sortear</button>
+    <p id="resultado">resultado</p>
+    <p id="historico">historico</p>
+
+    
+</body>
+
+<script>
+    const sorteados = [];
+
+    function sortear() {
+        const min = parseInt(document.getElementById("min").value);
+        const max = parseInt(document.getElementById("max").value);
+        const resultado = document.getElementById("resultado");
+
+        if (isNaN(min) || isNaN(max) || min > max) {
+            alert("Preencha os campos corretamente");
+            return;
+        }
+
+        const numero = Math.floor(Math.random() * (max - min + 1)) + min;
+        resultado.textContent = "Resultado: " + numero;
+
+        let achou = false;
+        for (let item of sorteados) {
+            if (item.numero === numero) {
+                item.contagem++;
+                achou = true;
+                break;
+            }
+        }
+
+        if (!achou) {
+            sorteados.push({ numero: numero, contagem: 1 });
+        }
+
+        mostrarLista();
+    }
+
+    function mostrarLista() {
+        const historico = document.getElementById("historico");
+        historico.innerHTML = "";
+
+        for (let item of sorteados) {
+            const texto = item.numero + (item.contagem > 1 ? ` (${item.contagem}x)` : "");
+            const li = document.createElement('li');
+            li.textContent = texto;
+            historico.appendChild(li);
+        }
+    }
+</script>
+</html>
