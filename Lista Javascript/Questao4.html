@@ -1,0 +1,102 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .IMC {
+            width: 80vw;
+            height: 80vh;
+        }
+    </style>
+    <script>
+        function calcular(){
+            const peso = parcefloat(document.getElementById('peso').value);
+            const altura = parcefloat(document.getElementById('altura').value);
+
+            const resultadoIMC = document.getElementById('resultadoIMC');
+            const classificacao = document.getElementById('classificacao');
+            const imgPerfil = document.getElementById('imgPerfil');
+
+            if(isNaN(peso) || isNaN(altura)){
+                alert("preencha os campos");
+            }else{
+                const IMC = peso/(altura*altura);
+                const imcFormatado = imc.toFixed(2);
+                resultadoIMC.textContent = "IMC = "+ imcFormatado;
+                
+                let classificacao = '';
+                let imgPerfil = '';
+
+                if (imc < 18.5) {
+                    classificacao = "abaixo do peso";
+                    imgPerfil = "abaixopeso.png"
+                }
+                if (imc < 24.9 && imc >= 18.5) {
+                    classificacao = "peso normal";
+                    imgPerfil = "normal.png"
+                }
+                if (imc < 29.9 && imc >= 24.9) {
+                    classificacao = "sobrepeso";
+                    imgPerfil = "sobrepeso.png"
+                }
+                if (imc < 34.9 && imc >= 29.9) {
+                    classificacao = "obesidade grau 1";
+                    imgPerfil = "obesidade1.png"
+                }
+                if (imc < 39.9 && imc >= 34.9) {
+                    classificacao = "obesidade grau 2";
+                    imgPerfil = "obesidade2.png"
+                }
+                if (imc > 40) {
+                    classificacao = "obesidade grau 3";
+                    imgPerfil = "obesidade3.png"
+                }
+
+                classificacao.textContent = "classificacao: "+ classificacao
+                imgPerfil.src = imgPerfil
+                imgPerfil.alt = classificacao
+
+            }
+
+        }
+        
+        
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="IMC">
+            <h1>Descubra seu IMC</h1>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+            <br><br>
+            <label for="peso">Peso(kg):</label>
+            <input type="number" id="peso" step="0.1">
+            <br><br>
+            <label for="nome">Altura(m):</label>
+            <input type="number" id="altura" step="0.01">
+            <br><br>
+            <button>Calcular</button>
+        </div>
+
+        <p id="resultadoIMC"></p>
+        <p id="classificacao"></p>
+
+        <img id="imgPerfil">
+    </div>
+
+
+</body>
+
+</html>

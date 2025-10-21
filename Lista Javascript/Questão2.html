@@ -1,10 +1,61 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tipos e Operações em JavaScript</title>
 </head>
 <body>
-    
+    <h1>Tipos de Variáveis em JavaScript</h1>
+    <button onclick="mostrarTipos()">Executar Script</button>
+
+    <h2>Tipos de Variáveis</h2>
+    <p id="pstring"></p>
+    <p id="pnumero"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobjeto"></p>
+    <p id="parray"></p>
+
+    <h2>Operações entre Tipos Diferentes</h2>
+    <p id="op1"></p>
+    <p id="op2"></p>
+    <p id="op3"></p>
+    <p id="op4"></p>
+
+    <script>
+        function mostrarTipos() {
+            let texto = "Olá, mundo!";
+            let numero = 42;
+            let booleano = true;
+            let indefinido;
+            let nulo = null;
+            let objeto = { nome: "henrique", idade: 19};
+            let array = [1, 2, 3];
+
+            document.getElementById("pstring").innerText = `texto: "${texto}" - Tipo: ${typeof texto}`;
+            document.getElementById("pnumero").innerText = `numero: ${numero} - Tipo: ${typeof numero}`;
+            document.getElementById("pboolean").innerText = `booleano: ${booleano} - Tipo: ${typeof booleano}`;
+            document.getElementById("pundefined").innerText = `indefinido - Tipo: ${typeof indefinido}`;
+            document.getElementById("pnull").innerText = `nulo: ${nulo} - Tipo: ${typeof nulo} (atenção: isso é uma peculiaridade do JavaScript!)`;
+            document.getElementById("pobjeto").innerText = `objeto: ${JSON.stringify(objeto)} - Tipo: ${typeof objeto}`;
+            document.getElementById("parray").innerText = `array: [${array}] - Tipo: ${typeof array} (Arrays são objetos em JavaScript)`;
+
+            let op1 = texto + numero;
+            let op2 = booleano * numero;
+            let op3 = booleano + texto;
+            let op4 = array + booleano;
+
+            console.log("texto + numero:", op1);
+            console.log("booleano * numero:", op2);
+            console.log("booleano + texto:", op3);
+            console.log("array + booleano:", op4);
+
+            document.getElementById("op1").innerText = `"${texto}" + ${numero} = "${op1}" → A string prevalece, então ocorre concatenação.`;
+            document.getElementById("op2").innerText = `${booleano} * ${numero} = ${op2} → true é convertido para 1, então 1 * 42 = 42.`;
+            document.getElementById("op3").innerText = `${booleano} + "${texto}" = "${op3}" → booleano vira string e ocorre concatenação.`;
+            document.getElementById("op4").innerText = `[${array}] + ${booleano} = "${op4}" → array vira string ("1,2,3"), depois concatena com "true".`;
+        }
+    </script>
 </body>
 </html>
