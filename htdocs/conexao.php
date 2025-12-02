@@ -9,13 +9,21 @@ function conectaBD()
 
     return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 }
-conectaBD();
+
+function buscarUsuarios($termo)
+{
+    $con = conectaBD();
+    $termo = "%{$termo}%";
+    $stmt = $con->prepare("SELECT * FROM usuarios WHERE nome LIKE :termo OR email LIKE :termo");
+    $stmt->bindParam(':termo', $termo);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 function cadastraUsuario($nome, $email, $senha)
 {
     $con = conectaBD();
     $stmt = $con->prepare("insert into usuarios (nome, email, senha) values(:nome, :email, :senha)");
-
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':senha', $senha);
@@ -66,25 +74,6 @@ function loginUsuario($nome, $email, $senha){
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-
-function buscarUsuarios($termo)
-{
-    $con = conectaBD();
-    $termo = "%{$termo}%";
-    $stmt = $con->prepare("SELECT * FROM usuarios WHERE nome LIKE :termo OR email LIKE :termo");
-    $stmt->bindParam(':termo', $termo);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
-
-function deletaTudo()
-{
-    for ($i = 1; $i < 100; $i++) {
-        deleteUsuario($i);
-    }
-}
-
-
 ?>
 
 

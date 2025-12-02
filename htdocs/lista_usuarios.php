@@ -20,7 +20,6 @@
         </tr>
         <?php 
 require_once "conexao.php";
-
 if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
     $termo = trim($_GET['busca']);
     $usuarios = buscarUsuarios($termo);

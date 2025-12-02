@@ -7,7 +7,7 @@ if (!isset($_POST["nome"]) || !isset($_POST["email"]) || !isset($_POST["senha"])
 
 require_once "conexao.php";
 
-$id = cadastraUsuario($_POST["nome"], $_POST["email"], $_POST["senha"]);
+cadastraUsuario($_POST["nome"], $_POST["email"], $_POST["senha"]);
 
 header('Location: login_usuario.php');
 exit();
