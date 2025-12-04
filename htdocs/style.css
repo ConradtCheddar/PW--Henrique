@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #667eea;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*cadatro*/
+.cadastro {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cadastro h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cadastro label {
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cadastro input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.cadastro input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.cadastro button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+}
+
+.cadastro button:hover {
+    background: #764ba2;
+}
+
+.cadastro a {
+    background: #764ba2 ;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+    align-self: center;
+    min-width: 200px;
+}
+
+.cadastro a:hover {
+    background: #667eea;
+}
+
+/*login*/
+.login {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.login h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login label {
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.login input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.login button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+}
+
+.login button:hover {
+    background: #764ba2;
+}
+
+.login a {
+    background: #764ba2 ;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+    align-self: center;
+    min-width: 200px;
+}
+
+.login a:hover {
+     background: #667eea;
+}
+
+/*editar*/
+.editar {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.editar h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.editar form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editar label {
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.editar input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.editar input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.editar button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+}
+
+.editar button:hover {
+    background: #764ba2;
+}
+
+.editar a {
+    background: #764ba2 ;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+    align-self: center;
+    min-width: 200px;
+}
+
+.editar a:hover {
+     background: #667eea;
+}
+
+/*lista*/
+.conteiner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.barra_pesquisa {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-box button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.search-box button:hover {
+    background: #764ba2;
+}
+
+.search-box a {
+    background: #f44336;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.5s ease;
+}
+
+.search-box a:hover {
+    background: #771737;
+}
+
+.lista {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.lista h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.lista p {
+    color: #666;
+    font-size: 14px;
+}
+
+.lista table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.lista table th {
+    background: #764ba2;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.lista table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+}
+
+.lista table tr:hover {
+    background-color: #f8f9ff;
+}
+
+.lista table a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.lista table a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.lista>a {
+    background: #f44336;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.5s ease;
+    align-self: center;
+    min-width: 200px;
+}
+
+.lista>a:hover {
+    background: #771737;
+}
+
+
+
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .lista table {
+        font-size: 14px;
+    }
+
+    .lista table th,
+    .lista table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cadastro,
+    .login,
+    .editar {
+        padding: 25px;
+    }
+
+    .lista {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .lista table {
+        min-width: 600px;
+    }
+}
